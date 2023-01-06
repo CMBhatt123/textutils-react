@@ -4,7 +4,7 @@ export default function Textform(props) {
   return (
     <div>
       <div className="mb-3">
-        <h1>{props.heading}</h1>
+        <h1>{props.heading}-{text}</h1>
         <label for="mybox" className="form-label"></label>
         <textarea className="form-control my-3" id="mybox" rows="8"></textarea>
       </div>
