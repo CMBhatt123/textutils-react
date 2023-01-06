@@ -29,11 +29,10 @@ export default function Textform(props) {
         </button>
         <div className="conatainer my-3">
           <h1>Your text summary</h1>
-
           <p>
-            {" "}
             {text.split(" ").length} words and {text.length} characters
           </p>
+          <p>{0.008 * text.split(" ").length}minutes to read.</p>
         </div>
       </div>
     </>
