@@ -8,25 +8,34 @@ export default function Textform(props) {
     setText(newText);
   };
   const handleOnChange = (event) => {
-    console.log("On Change");
+    // console.log("On Change");
     setText(event.target.value);
   };
   return (
-    <div>
-      <div className="mb-3">
+    <>
+      <div className="conatainer">
         <h1>{props.heading}</h1>
-        <label for="mybox" className="form-label"></label>
-        <textarea
-          className="form-control my-3"
-          value={text}
-          onChange={handleOnChange}
-          id="mybox"
-          rows="8"
-        ></textarea>
+        <div>
+          <textarea
+            className="form-control my-3"
+            value={text}
+            onChange={handleOnChange}
+            id="mybox"
+            rows="8"
+          ></textarea>
+        </div>
+        <button className="btn btn-primary" onClick={handleUpclick}>
+          Convert to uppercase
+        </button>
+        <div className="conatainer my-3">
+          <h1>Your text summary</h1>
+
+          <p>
+            {" "}
+            {text.split(" ").length} words and {text.length} characters
+          </p>
+        </div>
       </div>
-      <button className="btn btn-primary" onClick={handleUpclick}>
-        Convert to uppercase
-      </button>
-    </div>
+    </>
   );
 }
